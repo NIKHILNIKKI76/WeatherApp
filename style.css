@@ -20,6 +20,10 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px 0;
   }
+  #imgNavbar{
+    height: 40px;
+    width: 36px;
+  }
   
   /* Style for individual paragraphs */
   .about-section p {

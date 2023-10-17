@@ -61,9 +61,43 @@ async function getdata(city) {
 
 fetchData("Delhi");
 
-const cities = ["Shanghai", "Boston", "Tokyo", "New York"];
 
-cities.forEach(async (city)=>{
+const cities = [
+    "Dubai", "Singapore", "London", "Paris", "New York", "Tokyo",
+    "Amsterdam", "Barcelona", "Rome", "Madrid", "Rio de Janeiro", "Sydney"
+];
+var cellNames = ["Cloud_pct", "Temp", "Feels_like", "Humidity", "Min_temp", "Max_temp", "Wind_speed", "WIND_DEGREES", "Sunrise", "Sunset"];
+function createCityRow(cityName) {
+    // Get a reference to the table body
+    var tableBody = document.getElementById("tableBody");
+
+    // Create a new table row element
+    var row = document.createElement("tr");
+
+    // Create and append cells to the row
+    var cityCell = document.createElement("th");
+    cityCell.textContent = cityName;
+    row.appendChild(cityCell);
+
+    for (var i = 0; i < 10; i++) {
+        var cell = document.createElement("td");
+        cell.id = cityName + cellNames[i]; // Set the id based on city name and cell name
+        row.appendChild(cell);
+    }
+
+    // Append the new row to the table body
+    tableBody.appendChild(row);
+}
+
+// Example usage
+
+cities.forEach(createCityRow);
+
+// createCityRow(cityName);
+
+
+
+cities.forEach(async (city) => {
     const result = await getdata(city);
     document.getElementById(`${city}Cloud_pct`).innerHTML = result.cloud_pct;
     document.getElementById(`${city}Temp`).innerHTML = result.temp;
@@ -73,7 +107,7 @@ cities.forEach(async (city)=>{
     document.getElementById(`${city}Max_temp`).innerHTML = result.max_temp;
     document.getElementById(`${city}Wind_speed`).innerHTML = result.wind_speed;
     document.getElementById(`${city}WIND_DEGREES`).innerHTML = result.wind_degrees;
-    document.getElementById(`${city}Sunrise `).innerHTML = result.sunrise;
+    document.getElementById(`${city}Sunrise`).innerHTML = result.sunrise;
     document.getElementById(`${city}Sunset`).innerHTML = result.sunset;
 })
 

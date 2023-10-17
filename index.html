@@ -15,7 +15,8 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Weather App</a>
+            <img src="navbarImage.png" alt=""class="navbar-brand" id="imgNavbar">
+            <a class="navbar-brand" href="#" style="font-weight: 650;">Weather App</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -58,7 +59,7 @@
 
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="City name (e.g.London)" id="city"
+                    <input class="form-control me-2" type="search" placeholder="Place name(eg:London)" id="city"
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit" id="submit">Search </button>
                 </form>
@@ -142,8 +143,10 @@
                             <th style="width: 22%;"> Sunset </th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody id="tableBody">
+                        <!-- table rows are created dynamically from javascript. this row is just example.NIKHIL! -->
+                        <!-- table rows are created and the id's are given to them,later using that id's weather data is filled from the api object. -->
+                        <!-- <tr> 
                             <th scope="row" class="text-start">Tokyo</th>
                             <td id="TokyoCloud_pct"></td>
                             <td id="TokyoTemp"></td>
@@ -155,52 +158,7 @@
                             <td id="TokyoWIND_DEGREES"></td>
                             <td id="TokyoSunrise "></td>
                             <td id="TokyoSunset"></td>
-                        </tr>
-
-
-                        <tr>
-                            <th scope="row" class="text-start">Boston</th>
-                            <td id="BostonCloud_pct"></td>
-                            <td id="BostonTemp"></td>
-                            <td id="BostonFeels_like"></td>
-                            <td id="BostonHumidity"></td>
-                            <td id="BostonMin_temp"></td>
-                            <td id="BostonMax_temp"></td>
-                            <td id="BostonWind_speed"></td>
-                            <td id="BostonWIND_DEGREES"></td>
-                            <td id="BostonSunrise "></td>
-                            <td id="BostonSunset"></td>
-                        </tr>
-                    </tbody>
-
-                    <tbody>
-                        <tr>
-                            <th scope="row" class="text-start">Shanghai</th>
-                            <td id="ShanghaiCloud_pct"></td>
-                            <td id="ShanghaiTemp"></td>
-                            <td id="ShanghaiFeels_like"></td>
-                            <td id="ShanghaiHumidity"></td>
-                            <td id="ShanghaiMin_temp"></td>
-                            <td id="ShanghaiMax_temp"></td>
-                            <td id="ShanghaiWind_speed"></td>
-                            <td id="ShanghaiWIND_DEGREES"></td>
-                            <td id="ShanghaiSunrise "></td>
-                            <td id="ShanghaiSunset"></td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row" class="text-start">New York</th>
-                            <td id="New YorkCloud_pct"></td>
-                            <td id="New YorkTemp"></td>
-                            <td id="New YorkFeels_like"></td>
-                            <td id="New YorkHumidity"></td>
-                            <td id="New YorkMin_temp"></td>
-                            <td id="New YorkMax_temp"></td>
-                            <td id="New YorkWind_speed"></td>
-                            <td id="New YorkWIND_DEGREES"></td>
-                            <td id="New YorkSunrise "></td>
-                            <td id="New YorkSunset"></td>
-                        </tr>
+                        </tr> -->
 
                     </tbody>
                 </table>
