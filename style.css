@@ -35,6 +35,16 @@
     margin-bottom: 20px;
   }
   
+/* CSS for the specific LinkedIn link */
+#linkedin-link {
+  color: #0077B5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#linkedin-link:hover {
+  color: #004471;
+}
 
 
  
