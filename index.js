@@ -79,5 +79,9 @@ cities.forEach(async (city)=>{
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    fetchData(city.value);
+    const cityValue = city.value.trim(); // Trim leading and trailing white spaces
+    if (cityValue !== "") {
+        fetchData(cityValue);
+    }
+
 })
